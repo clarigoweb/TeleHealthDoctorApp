@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TeleHealth Doctor</string>
+    <string name="sign_in_with_otp">Sign in with OTP</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_to_telehelth">Login to Telehelth</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="signup">Signup</string>
+    <string name="sign_up_to_doctor">Sign up to Doctor</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="location">Location</string>
+    <string name="license_number">License Number</string>
+    <string name="sign_up_">Sign-up</string>
+    <string name="already_account">Already account?</string>
+    <string name="login">Login</string>
+    <string name="enter_verification_code_">Enter verification code which we have send you on your register mobile number</string>
+    <string name="submit">Submit</string>
+    <string name="resend">Resend</string>
+    <string name="verify_your_account">Verify your Account</string>
+</resources>

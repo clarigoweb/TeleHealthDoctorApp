@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgound"
+    tools:context=".ui.SignUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_100dp"
+            android:background="@drawable/top_corner_radius"
+            android:orientation="vertical"
+            android:padding="@dimen/_15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up_to_doctor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:background="@drawable/editor_back"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableLeft="@drawable/user"
+                android:hint="@string/full_name"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp"
+                 />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/editor_back"
+                android:hint="@string/mobile"
+                android:drawableStart="@drawable/number"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableLeft="@drawable/number"
+                android:inputType="phone"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/editor_back"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableLeft="@drawable/email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/editor_back"
+                android:hint="@string/location"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableLeft="@drawable/location"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/editor_back"
+                android:hint="@string/password"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableLeft="@drawable/password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/editor_back"
+                android:drawableStart="@drawable/licence"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableLeft="@drawable/licence"
+                android:hint="@string/license_number"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:drawableStart="@drawable/accounttype"
+                android:drawablePadding="@dimen/_10dp"
+                android:drawableEnd="@drawable/dropdown"
+                android:drawableLeft="@drawable/accounttype"
+                android:background="@drawable/editor_back"
+                android:hint="Account Type"
+                android:padding="@dimen/_15dp"
+                android:textSize="@dimen/_16sp"
+                android:drawableRight="@drawable/dropdown" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:background="@drawable/btn_back"
+                android:padding="@dimen/_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/sign_up_"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_22dp"
+                android:text="@string/already_account"
+                android:textColor="@color/gray_text" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_15dp"
+                android:text="@string/login"
+                android:textColor="@color/main_color" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
