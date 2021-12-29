@@ -2,8 +2,10 @@ package com.app.telehealthdoctor.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.app.telehealthdoctor.MainActivity
 import com.app.telehealthdoctor.R
 
 class LoginActivity : AppCompatActivity() {
@@ -17,6 +19,14 @@ class LoginActivity : AppCompatActivity() {
         }
         findViewById<TextView>(R.id.tv_signUpWithOtp).setOnClickListener {
             val intent = Intent(this, SignUpWithOtp::class.java)
+            startActivity(intent)
+        }
+        findViewById<TextView>(R.id.tv_forgotPass).setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
+        findViewById<RelativeLayout>(R.id.btn_login).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

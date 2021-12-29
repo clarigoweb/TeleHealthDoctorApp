@@ -9,16 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinNewProject">
-        <activity android:name="com.app.telehealthdoctor.ui.SignUpWithOtp"></activity>
-        <activity android:name="com.app.telehealthdoctor.ui.SignUp" />
-        <activity android:name="com.app.telehealthdoctor.ui.LoginActivity">
+        <activity android:name=".ui.ForgotPassword"></activity>
+        <activity
+            android:name=".ui.Splash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.app.telehealthdoctor.MainActivity" />
+        <activity android:name=".ui.SignUpWithOtp" />
+        <activity android:name=".ui.SignUp" />
+        <activity android:name=".ui.LoginActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

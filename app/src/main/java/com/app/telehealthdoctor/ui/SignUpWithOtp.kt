@@ -13,10 +13,11 @@ class SignUpWithOtp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_with_otp)
-        otpTextView = findViewById<OtpTextView>(R.id.otp_view)
+        otpTextView = findViewById(R.id.otp_view)
         otpTextView?.requestFocusOTP()
         otpTextView?.otpListener = object : OTPListener {
             override fun onInteractionListener() {
+
             }
 
             override fun onOTPComplete(otp: String) {

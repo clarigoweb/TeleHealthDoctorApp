@@ -14,5 +14,6 @@ class SignUp : AppCompatActivity() {
         findViewById<TextView>(R.id.tv_login).setOnClickListener(View.OnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         })
+
     }
 }
