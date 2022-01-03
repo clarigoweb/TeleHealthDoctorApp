@@ -25,4 +25,19 @@
     <string name="new_appointments">New Appointments</string>
     <string name="see_all">See All</string>
     <string name="view_all">View All</string>
+    <string name="availability">Availability</string>
+    <string name="profile">Profile</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="logout">Logout</string>
+    <string name="support_chat">Support Chat</string>
+    <string name="change_password">Change Password</string>
+    <string name="manage_finance">Manage Finance</string>
+    <string name="insurance">Insurance</string>
+    <string name="rating_and_reviews">Rating and Reviews</string>
+    <string name="post_feeds">Post Feeds</string>
+    <string name="fee_management">Fee Management</string>
+    <string name="prescription"><u>Prescriptions</u></string>
+
 </resources>

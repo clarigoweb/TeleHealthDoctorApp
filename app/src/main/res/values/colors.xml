@@ -12,5 +12,8 @@
     <color name="main_color">#5DC8D8</color>
     <color name="light_backcolor">#F5F5F5</color>
     <color name="gray_text">#757575</color>
+    <color name="green">#00A010</color>
+    <color name="gray_light">#A1757575</color>
+    <color name="orange_light">#FFAE67</color>
 
 </resources>

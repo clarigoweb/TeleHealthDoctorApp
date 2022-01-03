@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.AddInsuranceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70dp"
+            android:background="@color/main_color"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:text="Add Insurance"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shape" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Logo"
+                    android:textColor="@color/gray_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@drawable/btn_back_main"
+                    android:paddingStart="@dimen/_15dp"
+                    android:paddingTop="@dimen/_5dp"
+                    android:paddingEnd="@dimen/_15dp"
+                    android:paddingBottom="@dimen/_5dp"
+                    android:text="Browse"
+                    android:textColor="@color/main_color"
+                    android:textSize="13dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:clickable="false"
+            android:drawableEnd="@drawable/down_arrow"
+            android:editable="false"
+            android:hint="Specialty"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:clickable="false"
+            android:drawableEnd="@drawable/down_arrow"
+            android:editable="false"
+            android:hint="Educational information"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:hint="Address"
+            android:inputType="textPostalAddress"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:hint="Nationality"
+            android:inputType="textPostalAddress"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="Experience"
+            android:textColor="@color/gray_text"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:hint="Previous experience"
+            android:inputType="textPostalAddress"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/editor_back_secound"
+            android:clickable="false"
+            android:drawableEnd="@drawable/down_arrow"
+            android:focusable="false"
+            android:hint="Year"
+            android:inputType="textPostalAddress"
+            android:padding="@dimen/_15dp"
+            android:textSize="@dimen/_14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_red"
+                android:gravity="center"
+                android:padding="@dimen/_15dp"
+                android:text="Clear"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:padding="@dimen/_15dp"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

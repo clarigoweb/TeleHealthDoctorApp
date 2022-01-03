@@ -49,6 +49,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
 //horizontal calendar
     implementation 'com.michalsvec:single-row-calednar:1.0.0'
+//Bar Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+//revenue chart
+    implementation 'com.github.IntruderShanky:scatter-piechart:1.0.0'
 
 
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.TransactionFrag">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15dp"
+        android:layout_marginVertical="@dimen/_15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_toStartOf="@+id/iv_filter"
+            android:background="@drawable/editor_back_secound"
+            android:drawableEnd="@drawable/down_arrow"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10dp"
+            android:text="13200 Total Payment" />
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/filter" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5dp" />
+
+</LinearLayout>

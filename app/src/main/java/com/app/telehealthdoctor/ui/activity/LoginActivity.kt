@@ -1,4 +1,4 @@
-package com.app.telehealthdoctor.ui
+package com.app.telehealthdoctor.ui.activity
 
 import android.content.Intent
 import android.os.Bundle

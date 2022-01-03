@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgound"
-    tools:context=".ui.SignUp">
+    tools:context=".ui.activity.SignUp">
 
     <RelativeLayout
         android:layout_width="match_parent"

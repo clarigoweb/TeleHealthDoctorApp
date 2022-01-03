@@ -3,10 +3,11 @@ package com.app.telehealthdoctor
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.app.telehealthdoctor.ui.AppointmentFragment
-import com.app.telehealthdoctor.ui.AvailabilityFragment
-import com.app.telehealthdoctor.ui.HomeFragment
-import com.app.telehealthdoctor.ui.SettingFragment
+import com.app.telehealthdoctor.ui.fragments.AppointmentFragment
+import com.app.telehealthdoctor.ui.fragments.AvailabilityFragment
+
+import com.app.telehealthdoctor.ui.fragments.HomeFragment
+import com.app.telehealthdoctor.ui.fragments.SettingFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

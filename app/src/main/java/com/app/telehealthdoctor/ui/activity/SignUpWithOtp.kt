@@ -1,4 +1,4 @@
-package com.app.telehealthdoctor.ui
+package com.app.telehealthdoctor.ui.activity
 
 import `in`.aabhasjindal.otptextview.OTPListener
 import `in`.aabhasjindal.otptextview.OtpTextView

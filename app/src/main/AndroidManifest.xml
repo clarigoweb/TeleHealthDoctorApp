@@ -4,14 +4,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/telehealth_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/telehealth_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinNewProject">
-        <activity android:name=".ui.ForgotPassword"></activity>
+        <activity android:name=".ui.activity.AppointmentDetailsActivity"></activity>
+        <activity android:name=".ui.activity.ChangePasswordActivity" />
+        <activity android:name=".ui.activity.ManageFinanceActivity" />
+        <activity android:name=".ui.activity.AddInsuranceActivity2" />
+        <activity android:name=".ui.activity.InsuranceActivity" />
+        <activity android:name=".ui.activity.ReviewAndRatingActivity" />
+        <activity android:name=".ui.activity.FeedsPostActivity" />
+        <activity android:name=".ui.activity.FeeManagementActivity" />
+        <activity android:name=".ui.activity.AddInsuranceActivity" />
+        <activity android:name=".ui.activity.ForgotPassword" />
         <activity
-            android:name=".ui.Splash"
+            android:name=".ui.activity.Splash"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SignUpWithOtp" />
-        <activity android:name=".ui.SignUp" />
-        <activity android:name=".ui.LoginActivity"></activity>
+        <activity android:name=".ui.activity.SignUpWithOtp" />
+        <activity android:name=".ui.activity.SignUp" />
+        <activity android:name=".ui.activity.LoginActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

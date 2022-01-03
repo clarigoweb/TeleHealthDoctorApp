@@ -1,17 +1,24 @@
-package com.app.telehealthdoctor.ui
+package com.app.telehealthdoctor.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.telehealthdoctor.R
+import com.app.telehealthdoctor.ui.adaptors.ScheduleAdaptor
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
 import com.michalsvec.singlerowcalendar.calendar.CalendarChangesObserver
 import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager
 import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendarAdapter
 import com.michalsvec.singlerowcalendar.selection.CalendarSelectionManager
 import com.michalsvec.singlerowcalendar.utils.DateUtils
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.calendar_item.view.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.android.synthetic.main.second_special_calendar_item.*
 import java.util.*
 
 
@@ -41,21 +48,72 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        calendarSetup(view)
+        setUpScheduleAdaptor(view)
+        setUpChart(view)
 
+        return view
+    }
+
+    //flow chart link
+//https://intensecoder.com/bar-chart-tutorial-in-android-using-kotlin/
+    private fun setUpChart(view: View) {
+        val entries: ArrayList<BarEntry> = ArrayList()
+        entries.add(BarEntry(1f, 4f))
+        entries.add(BarEntry(2f, 10f))
+        entries.add(BarEntry(3f, 2f))
+        entries.add(BarEntry(4f, 15f))
+        entries.add(BarEntry(5f, 13f))
+        entries.add(BarEntry(6f, 2f))
+
+        val barDataSet = BarDataSet(entries, "")
+        barDataSet.setColors(resources.getColor(R.color.main_color))
+
+        val data = BarData(barDataSet)
+        view.barChart.data = data
+
+
+        //hide grid lines
+        view.barChart.axisLeft.setDrawGridLines(false)
+        view.barChart.xAxis.setDrawGridLines(false)
+        view.barChart.xAxis.setDrawAxisLine(false)
+
+        //remove right y-axis
+        view.barChart.axisRight.isEnabled = false
+
+        //remove legend
+        view.barChart.legend.isEnabled = false
+
+
+        //remove description label
+        view.barChart.description.isEnabled = false
+
+
+        //add animation
+        view.barChart.animateY(3000)
+
+
+        //draw chart
+        view.barChart.invalidate()
+    }
+
+    private fun setUpScheduleAdaptor(view: View) {
+        view.rv_schedule.layoutManager = LinearLayoutManager(activity)
+        view.rv_schedule.adapter = ScheduleAdaptor()
+    }
+
+    private fun calendarSetup(view: View) {
         // set current date to calendar and current month to currentMonth variable
         calendar.time = Date()
         currentMonth = calendar[Calendar.MONTH]
 
 
-
         // calendar view manager is responsible for our displaying logic
-        val myCalendarViewManager = object :
+        var myCalendarViewManager = object :
             CalendarViewManager {
             override fun setCalendarViewResourceId(
-                position: Int,
-                date: Date,
-                isSelected: Boolean
+                position: Int, date: Date, isSelected: Boolean
             ): Int {
                 // set date to calendar according to position where we are
                 val cal = Calendar.getInstance()
@@ -63,16 +121,11 @@ class HomeFragment : Fragment() {
                 // if item is selected we return this layout items
                 // in this example. monday, wednesday and friday will have special item views and other days
                 // will be using basic item view
-//                return if (isSelected)
-//                    when (cal[Calendar.DAY_OF_WEEK]) {
-//                        Calendar.MONDAY -> R.layout.first_special_selected_calendar_item
-//                        Calendar.WEDNESDAY -> R.layout.second_special_selected_calendar_item
-//                        Calendar.FRIDAY -> R.layout.third_special_selected_calendar_item
-//                        else -> R.layout.selected_calendar_item
-//                    }
-                return View.generateViewId()
-//                else
-//                // here we return items which are not selected
+                return if (isSelected)
+                    R.layout.selected_calendar_item
+                else
+                // here we return items which are not selected
+                    R.layout.calendar_item
 //                    when (cal[Calendar.DAY_OF_WEEK]) {
 //                        Calendar.MONDAY -> R.layout.first_special_calendar_item
 //                        Calendar.WEDNESDAY -> R.layout.second_special_calendar_item
@@ -92,8 +145,8 @@ class HomeFragment : Fragment() {
             ) {
                 // using this method we can bind data to calendar view
                 // good practice is if all views in layout have same IDs in all item views
-//                holder.itemView.tv_date_calendar_item.text = DateUtils.getDayNumber(date)
-//                holder.itemView.tv_day_calendar_item.text = DateUtils.getDay3LettersName(date)
+                holder.itemView.tv_date_calendar_item.text = DateUtils.getDayNumber(date)
+                holder.itemView.tv_day_calendar_item.text = DateUtils.getDay3LettersName(date)
 
             }
         }
@@ -103,8 +156,9 @@ class HomeFragment : Fragment() {
             CalendarChangesObserver {
             // you can override more methods, in this example we need only this one
             override fun whenSelectionChanged(isSelected: Boolean, position: Int, date: Date) {
-//                tvDate.text = "${DateUtils.getMonthName(date)}, ${DateUtils.getDayNumber(date)} "
-//                tvDay.text = DateUtils.getDayName(date)
+                tv_date_calendar_item.text =
+                    "${DateUtils.getMonthName(date)}, ${DateUtils.getDayNumber(date)} "
+                tv_day_calendar_item.text = DateUtils.getDayName(date)
                 super.whenSelectionChanged(isSelected, position, date)
             }
 
@@ -119,20 +173,25 @@ class HomeFragment : Fragment() {
                 cal.time = date
                 // in this example sunday and saturday can't be selected, others can
                 return when (cal[Calendar.DAY_OF_WEEK]) {
-                    Calendar.SATURDAY -> false
-                    Calendar.SUNDAY -> false
+//                    Calendar.SATURDAY -> false
+//                    Calendar.SUNDAY -> false
                     else -> true
                 }
             }
         }
 
         // here we init our calendar, also you can set more properties if you haven't specified in XML layout
-        val singleRowCalendar = main_single_row_calendar.apply {
-//            myCalendarViewManager = myCalendarViewManager
+        view.main_single_row_calendar.apply {
+            calendarViewManager = myCalendarViewManager
             calendarChangesObserver = myCalendarChangesObserver
             calendarSelectionManager = mySelectionManager
+
+            futureDaysCount = 30
+            includeCurrentDate = true
+
             setDates(getFutureDatesOfCurrentMonth())
             init()
+
         }
 
 //        btnRight.setOnClickListener {
@@ -144,9 +203,6 @@ class HomeFragment : Fragment() {
 //        }
 
 
-
-
-        return view;
     }
 
     private fun getDatesOfNextMonth(): List<Date> {
