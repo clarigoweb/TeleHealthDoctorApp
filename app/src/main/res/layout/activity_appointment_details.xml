@@ -356,29 +356,273 @@
                 app:cardCornerRadius="@dimen/_8dp"
                 app:cardElevation="6dp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_15dp">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+
+                    <RelativeLayout
+                        android:id="@+id/btn_patient_history"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="Patient Hostory"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/_14dp"
-                        android:textStyle="bold" />
+                        android:layout_margin="@dimen/_15dp">
 
-                    <ImageView
-                        android:layout_width="@dimen/_20dp"
-                        android:layout_height="@dimen/_20dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:rotation="-90"
-                        android:src="@drawable/right_arrow" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Patient History"
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/_14dp"
+                            android:textStyle="bold" />
 
-                </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/iv_arrow"
+                            android:layout_width="@dimen/_20dp"
+                            android:layout_height="@dimen/_20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:rotation="90"
+                            android:src="@drawable/right_arrow" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/patient_history_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15dp"
+                        android:layout_marginBottom="@dimen/_15dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Allergies"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Insect Allergy"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15dp"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Pet Allergy"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Smock Allergy"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15dp"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Insect Allergy"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:background="@color/light_backcolor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:text="Surgeries"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Arthroscopy"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15dp"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Circumcision"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Circumstances"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15dp"
+                                android:background="@drawable/allergy_back"
+                                android:padding="@dimen/_10dp"
+                                android:text="Necessitatibus"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:background="@color/light_backcolor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:text="Social Medical History"
+                            android:textColor="@color/gray_text"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:text="Alcohol"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:text="Two times a week"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Simply dummy text"
+                                android:textColor="@color/gray_text"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="1 Jan 2021    5 Aug 2021"
+                                android:textColor="@color/gray_text"
+                                android:textSize="13dp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:background="@color/light_backcolor" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15dp"
+                            android:text="Tobacco"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:text="Two times a week"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Simply dummy text"
+                                android:textColor="@color/gray_text"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="1 Jan 2021    5 Aug 2021"
+                                android:textColor="@color/gray_text"
+                                android:textSize="13dp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -418,10 +662,7 @@
                             android:textColor="@color/gray_text"
                             android:textSize="@dimen/_14dp"
                             android:textStyle="bold" />
-
-
                     </RelativeLayout>
-
 
                     <TextView
                         android:layout_width="wrap_content"

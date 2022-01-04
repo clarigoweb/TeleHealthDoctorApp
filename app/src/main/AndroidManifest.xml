@@ -9,7 +9,10 @@
         android:roundIcon="@drawable/telehealth_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinNewProject">
-        <activity android:name=".ui.activity.AppointmentDetailsActivity"></activity>
+        <activity android:name=".ui.activity.AddFeedActivity"></activity>
+        <activity android:name=".ui.activity.AddBankActivity" />
+        <activity android:name=".ui.activity.ManagePaymentActivity" />
+        <activity android:name=".ui.activity.AppointmentDetailsActivity" />
         <activity android:name=".ui.activity.ChangePasswordActivity" />
         <activity android:name=".ui.activity.ManageFinanceActivity" />
         <activity android:name=".ui.activity.AddInsuranceActivity2" />

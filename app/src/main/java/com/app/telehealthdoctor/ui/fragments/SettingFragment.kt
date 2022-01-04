@@ -46,6 +46,7 @@ class SettingFragment : Fragment(), View.OnClickListener {
         view.btn_ratingReview.setOnClickListener(this)
         view.btn_insurance.setOnClickListener(this)
         view.btn_manageFinance.setOnClickListener(this)
+        view.btn_managePayment.setOnClickListener(this)
         view.btn_change_pass.setOnClickListener(this)
 
         view.btn_logOut.setOnClickListener(this)
@@ -80,6 +81,8 @@ class SettingFragment : Fragment(), View.OnClickListener {
             R.id.btn_ratingReview -> startActivity(Intent(activity, ReviewAndRatingActivity::class.java))
             R.id.btn_insurance -> startActivity(Intent(activity, InsuranceActivity::class.java))
             R.id.btn_manageFinance -> startActivity(Intent(activity, ManageFinanceActivity::class.java))
+            R.id.btn_managePayment -> startActivity(Intent(activity, ManagePaymentActivity::class.java))
+
             R.id.btn_change_pass -> startActivity(Intent(activity, ChangePasswordActivity::class.java))
 
             R.id.btn_logOut -> startActivity(Intent(activity, LoginActivity::class.java))

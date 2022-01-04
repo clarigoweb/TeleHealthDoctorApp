@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddFeedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70dp">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10dp"
+                android:src="@drawable/ic_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Add Feed"
+                android:textSize="@dimen/_15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15dp"
+            android:background="@null"
+            android:hint="Title Here"
+            android:text="Title Here"
+            android:textSize="@dimen/_20dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_feed" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:background="@null"
+                android:hint="Write your feed"
+                android:minLines="3"
+                android:padding="@dimen/_10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editor_back_secound"
+            android:drawableEnd="@drawable/down_arrow"
+            android:padding="@dimen/_15dp"
+            android:text="Categories" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:scrollbarSize="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_thumb" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:src="@drawable/doctor" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:src="@drawable/type" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:src="@drawable/lady_doctor" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:src="@drawable/doctor_two" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:src="@drawable/doctor_two" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_postFeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:background="@drawable/btn_blue"
+            android:gravity="center"
+            android:padding="@dimen/_15dp"
+            android:text="Post Feed"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

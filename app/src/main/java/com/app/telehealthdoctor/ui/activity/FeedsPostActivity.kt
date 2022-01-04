@@ -1,5 +1,6 @@
 package com.app.telehealthdoctor.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,10 +13,13 @@ class FeedsPostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feeds_post)
         setUpFeedsAdaptor()
+        add_feed.setOnClickListener {
+            startActivity(Intent(this, AddFeedActivity::class.java))
+        }
     }
 
     private fun setUpFeedsAdaptor() {
         rv_feeds.layoutManager = LinearLayoutManager(this)
-        rv_feeds.adapter= FeedsAdaptor()
+        rv_feeds.adapter = FeedsAdaptor()
     }
 }

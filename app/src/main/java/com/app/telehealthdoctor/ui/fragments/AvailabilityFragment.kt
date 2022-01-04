@@ -47,8 +47,14 @@ class AvailabilityFragment : Fragment() {
     }
 
     private fun setUpdaysListAdaptor(view: View) {
-        view.rv_daysList.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL, false)
-        view.rv_daysList.adapter = AvailabilityDaysAdaptor()
+
+        val dayslist =
+            listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+
+        view.rv_daysList.layoutManager =
+            LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        view.rv_daysList.adapter = AvailabilityDaysAdaptor(dayslist)
     }
 
     private fun setUpdAvailabilityAdaptor(view: View) {

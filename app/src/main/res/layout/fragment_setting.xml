@@ -393,6 +393,55 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btn_managePayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15dp"
+                android:layout_marginVertical="@dimen/_5dp"
+
+                android:clickable="true"
+                android:elevation="6dp"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:cardElevation="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/managePay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/manage_payment" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_15dp"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:layout_toEndOf="@+id/managePay"
+                        android:text="Manage Payment"
+                        android:textColor="@color/gray_text" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/btn_change_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

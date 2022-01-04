@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,63 +10,85 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/main_color"
         android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:gravity="center_vertical">
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:src="@drawable/back_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginLeft="@dimen/_15dp"
+                    android:text="Feed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18dp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_15dp"
-                android:src="@drawable/back_icon" />
+                android:layout_marginBottom="@dimen/_15dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_15dp"
-                android:layout_marginLeft="@dimen/_15dp"
-                android:text="Feed"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_18dp" />
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15dp"
+                    android:layout_marginEnd="@dimen/_15dp"
 
+                    android:background="@drawable/search_back"
+                    android:drawableStart="@drawable/search"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:hint="Search"
+                    android:padding="@dimen/_12dp"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_14dp" />
+
+
+            </RelativeLayout>
 
         </LinearLayout>
 
-        <RelativeLayout
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_feeds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_15dp">
-
-            <EditText
-                android:id="@+id/et_search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_15dp"
-                android:layout_marginEnd="@dimen/_15dp"
-
-                android:background="@drawable/search_back"
-                android:drawableStart="@drawable/search"
-                android:drawablePadding="@dimen/_10dp"
-                android:hint="Search"
-                android:padding="@dimen/_12dp"
-                android:textColorHint="@color/white"
-                android:textSize="@dimen/_14dp" />
-
-
-        </RelativeLayout>
-
+            android:layout_marginHorizontal="@dimen/_5dp" />
     </LinearLayout>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_feeds"
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_feed"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_5dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/main_color"
+        android:src="@drawable/ic_add_insurance"
+        android:tint="@color/white"
+        app:tint="@color/white"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_add_insurance" />
 
-</LinearLayout>
+</RelativeLayout>
